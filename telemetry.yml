@@ -1,0 +1,18 @@
+---
+- name: configure telemetry
+  hosts: localhost
+  gather_facts: false
+  become: true
+  pre_tasks:
+    - import_role:
+        name: ceph-defaults
+
+    - import_role:
+        name: ceph-facts
+        tasks_from: container_binary
+
+  tasks: 
+    - name: set_fact container_exec_cmd
+      ceph_telemetry:
+        state: enable
+        license: true
