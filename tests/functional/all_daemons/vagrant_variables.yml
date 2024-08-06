@@ -20,8 +20,8 @@ mgr_vms: 1
 ceph_install_source: stable
 
 # SUBNETS TO USE FOR THE VMS
-public_subnet: 192.168.1
-cluster_subnet: 192.168.2
+public_subnet: 192.168.10
+cluster_subnet: 192.168.20
 
 # MEMORY
 # set 1024 for CentOS
